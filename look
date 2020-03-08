@@ -1,0 +1,27 @@
+yum install git
+git config --global user.name "liudongyi"
+git config --global user.email "1713285328@qq.com" 
+git clone git@github.com:52LDY/CSDN.git
+git clone https://github.com/52LDY/CSDN.git
+ls
+cd CSDN/
+ls
+ssh-keygen -t rsa -C "1713285328@qq.com 第一次需要生成公钥然后去git官网的settingg选择SSH and GPG keys 然后新建New SSH key 
+
+[root@liudongyi CSDN]# git push -u origin master
+Username for 'https://github.com': liudongyi
+Password for 'https://liudongyi@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/52LDY/CSDN.git/'
+[root@liudongyi CSDN]# git push -u origin master
+Username for 'https://github.com': 1713285328@qq.com
+Password for 'https://1713285328@qq.com@github.com': 
+Counting objects: 4, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 425 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/52LDY/CSDN.git
+   87efe88..cc7b2dc  master -> master
+Branch master set up to track remote branch master from origin.
+然后就完成了！
+下次直接在CSDN中进行文件的修改，，之后就可以直接执行git push -u origin master命令来直接上传到远程的git服务器
